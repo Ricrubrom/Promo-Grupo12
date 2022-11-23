@@ -2,8 +2,9 @@ programa Grupo12
 
 procesos
 
+
   {Procesos del Cosechador}
-  
+  {Gonzalo Blasco - 14/11}
   proceso JuntarFlores(ES flores: numero)
   comenzar
     mientras(HayFlorEnLaEsquina)
@@ -11,6 +12,7 @@ procesos
       flores := flores + 1
   fin
 
+  {Mateo Romero - 14/11}
   proceso LimpiarEsquina(ES flores: numero; E miAv: numero; E miCa: numero)
   variables 
     randomAv, randomCa : numero
@@ -24,6 +26,7 @@ procesos
     LiberarEsquina(randomAv, randomCa)
   fin
 
+  {Gonzalo Blasco - 14/11}
   proceso DepositarFlores(E miAv: numero; E miCa: numero)
   comenzar
     BloquearEsquina(100, 1)
@@ -36,7 +39,7 @@ procesos
   
   
   {Procesos del Sembrador}
-  
+  {Gonzalo Blasco - 14/11}
   proceso RecogerElementos(ES papeles: numero)
   comenzar 
     mientras(HayFlorEnLaEsquina)
@@ -46,6 +49,7 @@ procesos
       papeles := papeles + 1
   fin
   
+  {Gonzalo Blasco - 14/11}
   proceso Sembrado(E miAv: numero; E miCa: numero; ES papeles: numero; ES sigo: boolean)
   variables
     randomCa : numero
@@ -68,7 +72,7 @@ procesos
       LiberarEsquina(100,1)
   fin
 
-
+{Mateo Romero - 14/11}
 areas
   AreaRJ : AreaP(50, 50, 50, 50)
   AreaC1 : AreaP(6, 8, 6, 8)
@@ -84,6 +88,7 @@ areas
 
 
 robots
+  {Mateo Romero - 14/11}
   robot Coshechador
   variables
     randomAv, randomCa, miAv, miCa, flores : numero
@@ -97,7 +102,7 @@ robots
     EnviarMensaje(flores, RJ)
   fin
 
-
+  {Gonzalo Blasco - 14/11}
   robot Sembrador
   variables
     ID, miAv, miCa, papeles: numero
@@ -115,7 +120,7 @@ robots
     EnviarMensaje(papeles, RJ)
   fin
 
-
+  {Mateo Romero - 14/11}
   robot Jefe
   variables
     totalFlores, receptor, rob, robMin, min : numero
@@ -144,10 +149,13 @@ robots
   fin
 
 
+{Mateo Romero - 14/11}
 variables
   C1, C2, C3 : Coshechador
   S1, S2 : Sembrador
   RJ : Jefe
+
+{Mateo Romero - 14/11}
 comenzar
   AsignarArea(C1, AreaC1)
   AsignarArea(C1, AreaCosecha)      {Asignaciones Cosechador 1}
