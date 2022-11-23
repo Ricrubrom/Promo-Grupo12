@@ -4,6 +4,7 @@ procesos
 
 
   {Procesos del Cosechador}
+
   {Gonzalo Blasco - 14/11}
   proceso JuntarFlores(ES flores: numero)
   comenzar
@@ -39,6 +40,7 @@ procesos
   
   
   {Procesos del Sembrador}
+
   {Gonzalo Blasco - 14/11}
   proceso RecogerElementos(ES papeles: numero)
   comenzar 
@@ -88,6 +90,7 @@ areas
 
 
 robots
+
   {Mateo Romero - 14/11}
   robot Coshechador
   variables
